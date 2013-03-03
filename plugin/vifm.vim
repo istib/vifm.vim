@@ -43,9 +43,9 @@ function! s:StartVifm(editcmd)
 
 "Gvim cannot handle ncurses so run vifm in an xterm.
 	if has("gui_running")
-		silent !xterm -e vifm -f 
+		silent !xterm -e vifm . -f 
 	else
-		silent !vifm -f 
+		silent !vifm . -f 
 	endif
 
 	redraw!
